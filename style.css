@@ -1,0 +1,273 @@
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Gilroy;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: linear-gradient(135deg, #153677, #4e085f);
+}
+main{
+    width: 100%;
+    height: 100%;
+    padding: 0.1px;
+}
+.box{
+    width: 70%;
+   
+    background-color: white;
+    margin: auto;
+    margin-top: 3%;
+    padding: 1vw;
+    
+}
+.box input{
+    outline: none;
+    border: 2px solid;
+    padding: 0.5vw;
+    width: 30%;
+}
+.mainhead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.head{
+    width: 17%;
+    height: 10%;
+    display: flex;
+    gap: 1%;
+    align-items: center;
+}
+.head h1{
+    color: #153677;
+}
+.head img{
+    width: 14%;
+    height: 90%;
+    object-fit: cover;
+}
+.middle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vw;
+}
+.middle input{
+    width: 70%;
+    padding: 1vw;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor:auto;
+}
+button{
+    padding: 0.7vw;
+    border: 2px solid #153677;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid;
+    background-color: transparent;
+    
+    width: 10%;
+    color:#153677 ;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 0;
+}
+button::after{
+    content: "";
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s linear;
+    z-index: -1;
+
+}
+button:hover::after{
+    background-color: #153677;
+   
+  width: 100%;
+}
+button:hover{
+    border: 2px solid #153677;
+    color: white;
+}
+ul{
+    width: 100%;
+    height: fit-content;
+    padding: 1vw;
+    padding-left: 4vw;
+    list-style-type: none; /* Removes bullet points frzom unordered lists */
+
+
+}
+
+
+ul li{
+    width: 100%;
+    height: 2%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    text-wrap: wrap;
+    padding: 0.1;
+    position: relative;
+    
+}
+.checked{
+    
+    color: black;
+}
+.line{
+    text-decoration: line-through;
+}
+
+ul li::before {
+    content: "";
+    height: 100%;
+    width: 3%;
+    position: absolute;
+    left: -3.5%;
+    background-image: url(images/uncheck.png);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 1px;
+}
+ .checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li {
+   
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: all 0.5s ease-in-out;
+
+}
+ul li p{
+    width: 85%;
+   
+}
+
+
+ul li i,ul li span{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.right{
+    width: 10%;
+    /* height: 100%; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right i:last-child{
+    line-height: 1.1;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    padding-left: 0.6vw;
+    padding-right: 0.9vw;
+    transition: padding 0.5s ease-in-out;
+    font-size: 2rem;
+}
+ul li i{
+    border-radius: 50%;
+    font-size: x-large;
+    transition: padding 0.5s ease-in-out;
+    padding: 0.4vw;
+
+
+}
+
+
+ul li i:hover{
+    color: white;
+    
+    background-color: #153677;
+}
+
+
+@media (max-width:600px){
+    .middle button {
+        padding: 0.7vw;
+        border-radius: 5px;
+        outline: none;
+        border: 2px solid;
+        width: 17%;
+        background-color: #153677;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .box{
+        width: 95%;
+       
+        background-color: white;
+        margin: auto;
+        margin-top: 3%;
+        padding: 3vw;
+        
+    }
+    ul li span {
+        border-radius: 50%;
+        text-align: center;
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        line-height: 1;
+        right: 10%;
+        /* top: 20px; */
+        font-size: 1.3rem;
+        transition: all 0.5s ease-in-out;
+    }
+    ul li {
+        width: 100%;
+        padding: 0.1px;
+        padding-left: 8px;
+        height: 2%;
+        margin-bottom: 3.5%;
+        cursor: pointer;
+        text-wrap: wrap;
+        
+        position: relative;
+    }
+    ul li::before {
+        content: "";
+        padding: 0.5vw;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: -6.3%;
+        background-image: url(images/uncheck.png);
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
